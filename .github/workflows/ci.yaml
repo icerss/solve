@@ -56,7 +56,6 @@ jobs:
       
     - name: build Algolia search
       run: |
-        bundle install
         ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
         
     - name: Deploy
