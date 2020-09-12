@@ -62,9 +62,10 @@ function initSearch() {
         lunr.tokenizer.separator = /[\s\-/]+/
         {% endif %}
 		
-    require(['lib/lunr.js', '../lunr.stemmer.support.js', '../lunr.de.js'], function(lunr, stemmerSupport, de) {
+    require(['{{ '/assets/js/vendor/lunr.min.js' | relative_url }}', 'https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@latest/lunr.stemmer.support.js', 'https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@bc6b23fcb6b63fea5b875fbe93f670892878d378/lunr.zh.js'], function(lunr, stemmerSupport, de) {
 	stemmerSupport(lunr); 
 	zh(lunr); 
+	
 	
         var index = lunr(function () {
 		  this.use(lunr.zh);
