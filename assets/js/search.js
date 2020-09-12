@@ -57,7 +57,11 @@ function initSearch() {
         
         lunr.tokenizer.separator = /[\s\-/]+/
         
-        
+		
+    require(['lib/lunr.js', '../lunr.stemmer.support.js', '../lunr.de.js'], function(lunr, stemmerSupport, de) {
+	stemmerSupport(lunr); 
+	zh(lunr); 
+	
         var index = lunr(function () {
 		  this.use(lunr.zh);
           this.ref('id');
@@ -75,6 +79,7 @@ function initSearch() {
             });
           }
         });
+	});
   
         searchResults(index, data);
       } else {
