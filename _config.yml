@@ -115,3 +115,7 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+  
+algolia:
+  application_id: OY91SWM5HS
+  index_name: fastpages
