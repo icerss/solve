@@ -55,28 +55,50 @@ document.addEventListener("DOMContentLoaded",function(){var elem=document.queryS
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/assets/js/search.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@latest/demos/lib/require.js"></script>
-<!--
-<script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@latest/lunr.stemmer.support.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@bc6b23fcb6b63fea5b875fbe93f670892878d378/lunr.zh.js"></script>
--->
-
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search ERSS解集" aria-label="Search ERSS解集" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
+        <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+<style>
+#search-input {
+    width: 90%;
+    height: 35px;
+    color: #333;
+    background-color: rgba(227,231,236,.2);
+    line-height: 35px;
+    padding:0px 16px;
+    border: 1px solid #c0c0c0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 17px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+#search-input:focus {
+    outline: none;
+    border-color: rgb(102, 175, 233);
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #007fff;
+}
+</style>
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="search...">
+  <ul id="results-container"></ul>
 </div>
-
+<script>
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', // 文章列表模板
+    noResultsText: '没有搜索到文章', // 无搜索数据提示语
+    limit: 20, // 返回最大文章数
+    fuzzy: false // 是否模糊匹配
+})
+</script>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>

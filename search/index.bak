@@ -4,21 +4,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>地理吴老师 | ERSS解集</title>
+<title>Search | ERSS解集</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="地理吴老师" />
-<meta name="author" content="xhemj" />
+<meta property="og:title" content="Search" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="地理吴老师之解" />
-<meta property="og:description" content="地理吴老师之解" />
-<link rel="canonical" href="https://solve.now.sh/solve/dl-wls/" />
-<meta property="og:url" content="https://solve.now.sh/solve/dl-wls/" />
+<meta name="description" content="xhemj" />
+<meta property="og:description" content="xhemj" />
+<link rel="canonical" href="https://solve.now.sh/search/" />
+<meta property="og:url" content="https://solve.now.sh/search/" />
 <meta property="og:site_name" content="ERSS解集" />
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/xhemj/solve@master/dl-wls.jpg" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-12T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"xhemj"},"description":"地理吴老师之解","@type":"BlogPosting","headline":"地理吴老师","dateModified":"2020-09-12T00:00:00-05:00","datePublished":"2020-09-12T00:00:00-05:00","url":"https://solve.now.sh/solve/dl-wls/","mainEntityOfPage":{"@type":"WebPage","@id":"https://solve.now.sh/solve/dl-wls/"},"image":"https://cdn.jsdelivr.net/gh/xhemj/solve@master/dl-wls.jpg","@context":"https://schema.org"}</script>
+{"description":"xhemj","@type":"WebPage","headline":"Search","url":"https://solve.now.sh/search/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://solve.now.sh/feed.xml" title="ERSS解集" /><!-- BY:
       ___           ___           ___           ___            ___   
@@ -64,48 +60,19 @@ document.addEventListener("DOMContentLoaded",function(){var elem=document.queryS
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">地理吴老师</h1><p class="post-meta post-meta-title">
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">xhemj</span></span>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      1 min read
-    
-</span>• <!-- busuanzi -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">阅读量&nbsp;<strong><span id="busuanzi_value_site_pv"></span></strong></span>
-<!-- end busuanzi --></p>
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/categories/#solve">solve</a>
-        
-      
-      </p>
-    
-    </header>
-  <div id="main_post" class="post-content e-content" itemprop="articleBody">
-    <h2 id="地理吴老师之解">地理吴老师之解</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/xhemj/solve@master/dl-wls.jpg" alt="" /></p>
+        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
+<script type="text/javascript" src="/assets/js/search.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@latest/demos/lib/require.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+<div class="search">
+    <div class="search-input-wrap">
+    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search ERSS解集" aria-label="Search ERSS解集" autocomplete="off">
+    </div>
+    <br>
+    <div class="js-search-results search-results-wrap"></div>
+</div>
 
-  </div><!-- valine -->
-<script src='https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js'></script>
-<div id="vcomments"></div>
-<script>
-    new Valine({
-        el: '#vcomments',
-        appId: 'oAYCSRc49jibCaljV801Bc99-MdYXbMMI',
-        appKey: 'FNT7dOfoUL9cj44bKvAMIp7s',
-		placeholder: '来发评论呀！',
-		recordIP: 'true',
-		enableQQ: 'true'
-    })
-</script>
-<!-- end valine --><a class="u-url" href="/solve/dl-wls/" hidden></a>
-</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
