@@ -59,6 +59,7 @@ function initSearch() {
         
         
         var index = lunr(function () {
+		  this.use(lunr.zh);
           this.ref('id');
           this.field('title', { boost: 200 });
           this.field('content', { boost: 2 });
