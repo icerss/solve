@@ -52,7 +52,7 @@
   
       ,"page7": {
           "title": "",
-          "content": "[ {% for post in site.posts %} { title {{ post.title escape }}, category {{ post.category }}, tags {{ post.tags join ‘, ‘ }}, url {{ site.baseurl }}{{ post.url }}, date {{ post.date }} } {% unless forloop.last %},{% endunless %} {% endfor %} ] .",
+          "content": "[ {% for post in site.posts %} { “title” : “{{ post.title | escape }}”, “category” : “{{ post.category }}”, “tags” : “{{ post.tags | join: ‘, ‘ }}”, “url” : “{{ site.baseurl }}{{ post.url }}”, “date” : “{{ post.date }}” } {% unless forloop.last %},{% endunless %} {% endfor %} ] .",
           "url": "https://solve.now.sh/search.json",
           "relUrl": "/search.json",
           "date": ""
