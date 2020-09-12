@@ -49,16 +49,6 @@ jobs:
         sudo chmod -R 777 _site/
         cp CNAME _site/ 2>/dev/null || :
         
-    - name: Setup Ruby, JRuby and TruffleRuby
-      uses: ruby/setup-ruby@v1.45.0
-      with:
-        ruby-version: 2.7.1
-      
-    - name: build Algolia search
-      run: |
-        bundle install
-        ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
-        
     - name: Deploy
       if: github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v3
