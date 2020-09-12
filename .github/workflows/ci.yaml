@@ -49,6 +49,9 @@ jobs:
         sudo chmod -R 777 _site/
         cp CNAME _site/ 2>/dev/null || :
         
+    - name: Setup Ruby, JRuby and TruffleRuby
+      uses: ruby/setup-ruby@v1.45.0
+      
     - name: build Algolia search
       run: |
         bundle install
