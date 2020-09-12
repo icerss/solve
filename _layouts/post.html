@@ -57,9 +57,10 @@ layout: default
     {% endif -%}
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div id="main_post" class="post-content e-content" itemprop="articleBody">
     {{ content | toc  }}
   </div>
+  {% include fancybox.html -%}
   {%- if page.comments -%}
     {%- include valine.html -%}
   {%- endif -%}
