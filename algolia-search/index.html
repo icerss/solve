@@ -10,11 +10,11 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="xhemj" />
 <meta property="og:description" content="xhemj" />
-<link rel="canonical" href="https://solve.now.sh/search/" />
-<meta property="og:url" content="https://solve.now.sh/search/" />
+<link rel="canonical" href="https://solve.now.sh/algolia-search/" />
+<meta property="og:url" content="https://solve.now.sh/algolia-search/" />
 <meta property="og:site_name" content="ERSS解集" />
 <script type="application/ld+json">
-{"description":"xhemj","headline":"Search","@type":"WebPage","url":"https://solve.now.sh/search/","@context":"https://schema.org"}</script>
+{"description":"xhemj","@type":"WebPage","headline":"Search","url":"https://solve.now.sh/algolia-search/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://solve.now.sh/feed.xml" title="ERSS解集" /><!-- BY:
       ___           ___           ___           ___            ___   
@@ -55,23 +55,46 @@ document.addEventListener("DOMContentLoaded",function(){var elem=document.queryS
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/algolia-search/">Search</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/assets/js/search.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/MihaiValentin/lunr-languages@latest/demos/lib/require.js"></script>
-<script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search ERSS解集" aria-label="Search ERSS解集" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<div id="search-box" style="text-align: center">
+  <!-- SearchBox widget will appear here -->
 </div>
 
+<div id="hits" style="text-align: center">
+  <!-- Hits widget will appear here -->
+</div>
+<script>
+  const search = instantsearch({
+    appId: 'OY91SWM5HS',
+    apiKey: 'a1e18f20f507680cab74012e05ba4d40',
+    indexName: 'fastpages',
+    routing: true
+  });
+
+  // initialize SearchBox
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '#search-box',
+      placeholder: 'Search for products'
+    })
+  );
+
+  // initialize hits widget
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits'
+    })
+  );
+
+  search.start();
+</script>
 
       </div>
     </main><footer class="site-footer h-card">
