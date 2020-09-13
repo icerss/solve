@@ -28,7 +28,6 @@ group :jekyll_plugins do
   gem 'jekyll-gallery-generator'
 end
 
-gem install rmagick exifr
 gem "kramdown-math-katex"
 gem "jemoji"
 
