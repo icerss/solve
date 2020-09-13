@@ -44,6 +44,11 @@ jobs:
       env:
         JEKYLL_ENV: 'production'
         
+    - name: Setup Ruby, JRuby and TruffleRuby
+      uses: ruby/setup-ruby@v1.45.0
+      with: 
+        ruby-version: 2.7.1
+        
     - name: Algolia Search
       run: |
         ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
