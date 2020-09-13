@@ -41,10 +41,14 @@ jobs:
       uses: ruby/setup-ruby@v1.45.0
       with: 
         ruby-version: 2.7.1
-        
+
+    - name: install apt 
+      uses: ryankurte/action-apt@v0.1.0
+      with:
+        packages: libmagick++-dev
+    
     - name: install
       run: |
-        apt install libmagick++-dev
         bundle install
 
     - name: Jekyll build
