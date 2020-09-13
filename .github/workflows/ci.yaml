@@ -36,20 +36,6 @@ jobs:
       run: |
         rm -rf _site
         sudo chmod -R 777 .
-        
-    - name: Setup Ruby, JRuby and TruffleRuby
-      uses: ruby/setup-ruby@v1.45.0
-      with: 
-        ruby-version: 2.7.1
-
-    - name: install apt 
-      uses: ryankurte/action-apt@v0.1.0
-      with:
-        packages: libmagick++-dev
-    
-    - name: install
-      run: |
-        bundle install
 
     - name: Jekyll build
       uses: docker://hamelsmu/fastpages-jekyll
