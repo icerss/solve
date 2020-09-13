@@ -42,8 +42,9 @@ jobs:
       with: 
         ruby-version: 2.7.1
         
-    - name: bundle install
+    - name: install
       run: |
+        apt install libmagick++-dev
         bundle install
 
     - name: Jekyll build
