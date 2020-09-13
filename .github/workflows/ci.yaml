@@ -49,10 +49,9 @@ jobs:
       with: 
         ruby-version: 2.7.1
         
-    - name: Algolia Search
+    - name: bundle install
       run: |
         bundle install
-        ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
 
     - name: copy CNAME file into _site if CNAME exists
       run: |
