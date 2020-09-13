@@ -44,6 +44,10 @@ jobs:
       env:
         JEKYLL_ENV: 'production'
         
+    - name: Algolia Search
+      run: |
+        ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
+
     - name: copy CNAME file into _site if CNAME exists
       run: |
         sudo chmod -R 777 _site/

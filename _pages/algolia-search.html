@@ -1,0 +1,42 @@
+---
+layout: default
+permalink: /algolia-search/
+title: Search
+search_exclude: true
+---
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<div id="search-box" style="text-align: center">
+  <!-- SearchBox widget will appear here -->
+</div>
+
+<div id="hits" style="text-align: center">
+  <!-- Hits widget will appear here -->
+</div>
+<script>
+  const search = instantsearch({
+    appId: 'OY91SWM5HS',
+    apiKey: 'a1e18f20f507680cab74012e05ba4d40',
+    indexName: 'fastpages',
+    routing: true
+  });
+
+  // initialize SearchBox
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: '#search-box',
+      placeholder: 'Search for products'
+    })
+  );
+
+  // initialize hits widget
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits'
+    })
+  );
+
+  search.start();
+</script>
