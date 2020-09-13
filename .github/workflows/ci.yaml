@@ -51,6 +51,7 @@ jobs:
         
     - name: Algolia Search
       run: |
+        bundle install
         ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
 
     - name: copy CNAME file into _site if CNAME exists
